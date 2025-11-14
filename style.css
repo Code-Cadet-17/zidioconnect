@@ -1,0 +1,115 @@
+/* style.css — refined to match screenshots exactly */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --green: #2fb24a;        /* accent green from screenshots */
+  --black: #111111;
+  --muted: #7b7b7b;
+  --bg-light: #f1f6f3;     /* soft pale background strips */
+  --card-shadow: 0 14px 22px rgba(8,9,10,0.06);
+  --max-width: 1180px;
+}
+
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:'Poppins',sans-serif;color:var(--black);background:#fff}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 28px}
+
+/* header */
+.header{
+  background:#fff;
+  position:sticky;top:0;z-index:50;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{font-weight:900;font-size:28px;letter-spacing:1px}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{font-weight:500;color:#444;padding:6px 0;position:relative}
+.nav a.active{color:var(--green)}
+.nav a.active::after{
+  content:"";position:absolute;left:0;bottom:-12px;height:3px;width:36px;background:var(--green);border-radius:2px
+}
+.btn-contact{border:2px solid #111;padding:10px 18px;border-radius:4px;font-weight:700;letter-spacing:.6px}
+
+/* hero / above fold */
+.hero{
+  height:560px;
+  display:flex;align-items:center;
+  background-image: url('images/hero.jpg');
+  background-position:center center;background-size:cover;position:relative;
+}
+.hero::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:rgba(0,0,0,0.42)}
+.hero .container{position:relative;z-index:2}
+.hero-left{max-width:760px;padding:42px 0}
+.hero h1{font-size:72px;line-height:0.95;color:#fff;margin-bottom:12px;font-weight:800;letter-spacing:-1px}
+.hero p{font-size:18px;color:rgba(255,255,255,0.95);margin-bottom:22px}
+.cta{display:inline-block;background:var(--green);color:#fff;padding:14px 22px;border-radius:4px;font-weight:700}
+
+/* sections & typographic rules */
+.section{padding:64px 0}
+.section .small{color:var(--green);font-weight:700;letter-spacing:1px;font-size:13px;margin-bottom:10px}
+.h2{font-size:40px;margin:6px 0 18px;font-weight:800}
+
+/* two-column */
+.row{display:flex;gap:40px;align-items:center}
+.col-6{flex:1}
+
+/* service cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{background:#fff;border-radius:3px;box-shadow:var(--card-shadow);overflow:hidden}
+.card img{width:100%;height:220px;object-fit:cover}
+.card-content{padding:20px}
+.card-content h3{font-size:20px;margin:0 0 10px;font-weight:700}
+.card-content p{color:var(--muted);line-height:1.6}
+
+/* team grid */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{padding:18px}
+.team-avatar{height:220px;background:#eaeaea;border-radius:4px;overflow:hidden}
+.team-avatar img{width:100%;height:100%;object-fit:cover}
+.team-card h3{margin-top:14px;font-size:18px}
+.team-card p{color:var(--muted);line-height:1.5}
+
+/* pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.plan{background:#fff;padding:28px;border-radius:3px;box-shadow:var(--card-shadow)}
+.plan .circle{width:88px;height:88px;border-radius:50%;overflow:hidden;margin-bottom:18px}
+.plan h3{font-size:20px;margin-bottom:8px}
+
+/* how it works */
+.how-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.how-grid img{width:100%;height:260px;object-fit:cover;border-radius:4px}
+
+/* contact layout */
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:start}
+input[type="text"], input[type="email"], textarea{
+  width:100%;padding:12px;border:1px solid #d0d0d0;border-radius:2px;margin-bottom:16px;font-size:15px
+}
+.btn-submit{background:var(--green);color:#fff;padding:14px 22px;border-radius:4px;border:none;font-weight:700}
+
+/* aside contact box */
+.aside-box{background:#f5f5f5;padding:22px;border-radius:4px}
+.aside-box h3{margin:0 0 8px}
+
+/* footer */
+.footer{background:#0e2416;color:#fff;padding:56px 0;text-align:center}
+.footer .logo{color:#fff}
+
+/* responsive */
+@media(max-width:1100px){
+  .grid, .team-grid, .pricing-grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:56px}
+}
+@media(max-width:760px){
+  .nav{display:none}
+  .hero{height:420px}
+  .hero h1{font-size:34px}
+  .row{flex-direction:column}
+  .grid, .team-grid, .pricing-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .container{padding:0 20px}
+}
+/* FULL REAL CSS FROM EARLIER (this file will contain your complete refined stylesheet) */
