@@ -37,29 +37,13 @@ ZIDIOCONNECT/
 - Google Fonts (Poppins)  
 - GitHub Pages (Deployment)
 
-## 🌐 Live Demo
-
-https://Code-Cadet-17.github.io/zidioconnect/
-
-
 ## 💻 How to Run Locally
 
 1. Download or clone the repository  
 2. Open the project folder  
 3. Run `index.html` in any browser
 
-## 🚀 Deployment (GitHub Pages)
-
-1. Go to **Settings → Pages**  
-2. Under Branch: select **main**  
-3. Under Folder: select **/** (root)  
-4. Click **Save**  
-5. The site becomes live in 10–30 seconds
-
-
 ## 👤 Author
 
 Vyas Mittal  
 vyasmittal1206@gmail.com
-
-
